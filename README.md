@@ -334,8 +334,8 @@ You can run the **frontend** and **backend** together using Docker Compose.
 ### Steps
 
 ```bash
-git clone https://github.com/sylvaincodes/10minportfolioclient.git
-cd 10minportfolioclient
+git clone https://github.com/saifulislam-bd/ai-portfolio-builder.git
+cd ai-portfolio-builder
 Ensure your .env files are correctly set
 
 front/.env → Frontend environment variables
