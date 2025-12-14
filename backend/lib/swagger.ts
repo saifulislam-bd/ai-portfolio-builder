@@ -18,9 +18,9 @@ export const getApiDocs = () => {
           url: "https://github.com/sylvaincodes/10minportfolioclient/blob/main/LICENSE.md",
         },
         contact: {
-          name: "Sylvain Codes",
-          email: "syvlaincodeur@gmail.com",
-          url: "https://www.patreon.com/sylvaincodes",
+          name: "Saiful Islam",
+          email: "saifulislam.dev22@gmail.com",
+          url: "https://www.patreon.com/saifulislam_dev",
         },
       },
       servers: [
@@ -61,12 +61,12 @@ const options: swaggerJSDoc.Options = {
       version: "1.0.0",
       license: {
         name: "License EULA",
-        url: "https://github.com/sylvaincodes/10minportfolioclient/blob/main/LICENSE.md",
+        url: "",
       },
       contact: {
-        name: "Sylvain Codes",
-        email: "syvlaincodeur@gmail.com",
-        url: "https://www.patreon.com/sylvaincodes",
+        name: "Saiful Islam",
+        email: "saifulislam.dev22@gmail.com",
+        url: "https://www.patreon.com/saifulislam_dev",
       },
     },
     servers: [
