@@ -46,7 +46,7 @@ import {
   CreateTemplateData,
   Template,
   UpdateTemplateData,
-} from "@/lib/services/templates-services";
+} from "@/lib/services/templates-service";
 import TemplateThumbnail from "@/components/custom/template-thumbnail";
 
 export function TemplatesList() {
@@ -68,7 +68,7 @@ export function TemplatesList() {
 
   const [editingTemplate, setEditingTemplate] = useState<Template | null>(null);
   const [deletingTemplate, setDeletingTemplate] = useState<Template | null>(
-    null
+    null,
   );
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);

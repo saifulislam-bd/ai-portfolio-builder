@@ -1,6 +1,6 @@
 "use client";
 
-import { Template } from "@/lib/services/templates-services";
+import { Template } from "@/lib/services/templates-service";
 import React from "react";
 
 export default function TemplateThumbnail({

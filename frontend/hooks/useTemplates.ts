@@ -4,7 +4,7 @@ import {
   type Template,
   type CreateTemplateData,
   type UpdateTemplateData,
-} from "@/lib/services/templates-services";
+} from "@/lib/services/templates-service";
 import { showToast } from "@/lib/toast";
 import { devLog } from "@/lib/utils";
 
@@ -49,7 +49,7 @@ interface UseTemplatesReturn {
 }
 
 export function useTemplates(
-  initialOptions: UseTemplatesOptions = {}
+  initialOptions: UseTemplatesOptions = {},
 ): UseTemplatesReturn {
   const [templates, setTemplates] = useState<Template[]>([]);
   const [userTemplates, setUserTemplates] = useState<Template[]>([]);
@@ -68,11 +68,11 @@ export function useTemplates(
   const [page, setPageState] = useState(initialOptions.page || 1);
   const [search, setSearchState] = useState(initialOptions.search || "");
   const [status, setStatusState] = useState<"active" | "inactive" | "all">(
-    initialOptions.status || "all"
+    initialOptions.status || "all",
   );
   const [tags, setTagsState] = useState<string[]>(initialOptions.tags || []);
   const [premium, setPremiumState] = useState<boolean | undefined>(
-    initialOptions.premium
+    initialOptions.premium,
   );
 
   const fetchTemplates = useCallback(async () => {
@@ -104,7 +104,7 @@ export function useTemplates(
       devLog.error("Error fetching templates:", err);
       setIsError(true);
       setError(
-        err instanceof Error ? err.message : "Failed to fetch templates"
+        err instanceof Error ? err.message : "Failed to fetch templates",
       );
       showToast.error("Failed to fetch templates");
     } finally {
@@ -142,7 +142,7 @@ export function useTemplates(
       devLog.error("Error fetching templates:", err);
       setIsError(true);
       setError(
-        err instanceof Error ? err.message : "Failed to fetch templates"
+        err instanceof Error ? err.message : "Failed to fetch templates",
       );
       showToast.error("Failed to fetch templates");
     } finally {
@@ -177,7 +177,7 @@ export function useTemplates(
         setIsLoading(false);
       }
     },
-    []
+    [],
   );
 
   const updateTemplate = useCallback(
@@ -186,14 +186,14 @@ export function useTemplates(
         setIsLoading(true);
         const updatedTemplate = await templatesService.updateTemplate(
           _id,
-          data
+          data,
         );
 
         // Update in the list
         setTemplates((prev) =>
           prev.map((template) =>
-            template._id === _id ? updatedTemplate : template
-          )
+            template._id === _id ? updatedTemplate : template,
+          ),
         );
 
         showToast.success("Template updated successfully");
@@ -208,7 +208,7 @@ export function useTemplates(
         setIsLoading(false);
       }
     },
-    []
+    [],
   );
 
   const deleteTemplate = useCallback(async (_id: string): Promise<void> => {
@@ -241,9 +241,8 @@ export function useTemplates(
     async (_id: string): Promise<Template> => {
       try {
         setIsLoading(true);
-        const duplicatedTemplate = await templatesService.duplicateTemplate(
-          _id
-        );
+        const duplicatedTemplate =
+          await templatesService.duplicateTemplate(_id);
 
         // Add to the beginning of the list
         setTemplates((prev) => [duplicatedTemplate, ...prev]);
@@ -266,7 +265,7 @@ export function useTemplates(
         setIsLoading(false);
       }
     },
-    []
+    [],
   );
 
   // Filter setters

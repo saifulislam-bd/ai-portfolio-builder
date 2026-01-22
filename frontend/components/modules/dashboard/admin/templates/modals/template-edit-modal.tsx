@@ -31,7 +31,7 @@ import { Loader2, X } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect } from "react";
-import { UpdateTemplateData } from "@/lib/services/templates-services";
+import { UpdateTemplateData } from "@/lib/services/templates-service";
 import { TemplateFormData, templateSchema } from "@/lib/validations/template";
 
 interface Template extends TemplateFormData {
@@ -100,7 +100,7 @@ export function TemplateEditModal({
     const currentTags = form.getValues("tags");
     form.setValue(
       "tags",
-      currentTags.filter((tag: string) => tag !== tagToRemove)
+      currentTags.filter((tag: string) => tag !== tagToRemove),
     );
   };
 
