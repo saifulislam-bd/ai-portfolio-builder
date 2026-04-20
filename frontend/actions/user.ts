@@ -149,7 +149,7 @@ export const countUsers = cache(async function countUsers(): Promise<number> {
     const users = await Promise.race([
       clerk.users.getUserList({ limit: 1 }),
       new Promise<never>(
-        (_, reject) => setTimeout(() => reject(new Error("Timeout")), 10000) // Prevent hanging
+        (_, reject) => setTimeout(() => reject(new Error("Timeout")), 10000), // Prevent hanging
       ),
     ]);
 
