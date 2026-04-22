@@ -2,7 +2,7 @@ import React from "react";
 import FramerMotionProvider from "./framer-motion-provider";
 import ClerkProvider from "./clerk-provider";
 import ToasterProvider from "./ToastProvider";
-import StateProvider from "./state-provider";
+import StateProvider from "./State-Provider";
 import TooltipProvider from "./tooltip-provider";
 import { IntlProvider } from "./intl-provider.tsx";
 import { ThemeProvider } from "./theme-provider";
