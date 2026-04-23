@@ -4,8 +4,9 @@ import ClerkProvider from "./clerk-provider";
 import ToasterProvider from "./ToastProvider";
 import StateProvider from "./State-Provider";
 import TooltipProvider from "./tooltip-provider";
-import { IntlProvider } from "./intl-provider.tsx";
-import { ThemeProvider } from "./theme-provider";
+import { ThemeProvider } from "next-themes";
+import { IntlProvider } from "./intl-provider";
+
 // import { SentryProvider } from "./sentry-provider.tsx";
 
 export default function Providers({
