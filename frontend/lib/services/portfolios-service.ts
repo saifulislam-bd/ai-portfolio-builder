@@ -1,7 +1,7 @@
 import { getToken } from "@/actions/auth";
 import { apiClient } from "../api-client";
 import { handleApiError } from "../utils";
-import { Template } from "./templates-services";
+import { Template } from "./templates-service";
 import { devLog } from "@/lib/utils";
 
 export interface Portfolio {
